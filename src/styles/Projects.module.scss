@@ -1,0 +1,103 @@
+.ProjectsContainer {
+    padding-top: 7vh;
+    padding-inline: 10px;
+    .ProjectsTitleContainer {
+      display: flex;
+      flex-direction: row;
+      .ProjectsTitle {
+        font-size: 24px;
+        font-weight: 700;
+        &.active {
+          padding-left: 5px;
+          color: #0891b2;
+        }
+      }
+    }
+  
+    .ProjectCard {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #1e293b;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: row;
+      transition: filter 0.3s ease;
+  
+      &.blur {
+        filter: blur(10px);
+        cursor: pointer;
+      }
+  
+      &:hover {
+        cursor: pointer;
+      }
+      .Image {
+        height: 150px;
+        width: 150px;
+        border-radius: 6px;
+
+        &.withBg {
+          background-color: #fff;
+          object-fit: scale-down;
+        }
+        @media (max-width: 800px) {
+          align-self: center;
+        }
+      }
+      
+      @media (max-width: 720px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .ContentContainer {
+        padding-left: 20px;
+        .ContentHeader {
+          display: flex;
+          flex-direction: row;
+          @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .ContentTitle {
+            font-size: 22px;
+            font-weight: 500;
+            @media (max-width: 800px) {
+              display: flex;
+              justify-content: center;
+              padding-bottom: 10px;
+            }
+          }
+          .TechnologyCardContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            .TechnologyCard {
+              padding: 1.5px;
+              padding-inline: 5px;
+              background-color: purple;
+              border-radius: 6px;
+              margin-left: 10px;
+              font-size: 14px;
+              display: flex;
+              align-items: center;
+              color: black;
+              font-weight: 500;
+              @media (max-width: 480px) {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+  
+        .Content {
+          margin-top: 20px;
+          line-height: 26px;
+          color: #8d948d;
+          font-size: 16px;
+        }
+      }
+    }
+  }

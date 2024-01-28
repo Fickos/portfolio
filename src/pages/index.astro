@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeadingNavbar from '../components/HeadingNavbar';
+import Projects from "../components/Projects";
+import HobbyProjects from "../components/HobbyProjects";
+---
+
+<Layout title="Filip Volaric">
+	<main>
+		<div class="container">
+			<HeadingNavbar client:load />
+			<div class="HeroSection" id="section-0">
+				<div class="HeroContent">
+				  <div class="HeroTitle">About me</div>
+				  <div class="HeroParagraph">
+					I've been immersed in the world of software engineering for a decade, starting back in high school.
+					Now, on the brink of wrapping up my master's degree. I've got multiple real-world projects under my belt. <br>
+					Whether it's tackling complex interfaces, diving into backend, or manipulating infrastructure <b>I love the challenge</b>. <br>
+					Although full-stack development is my main area of interest, while obtaining my bachelors degree, I got a solid theoretical foundation in Machine Learning and Computer Vision.<br>
+					I'd describe myself as a versatile, commited individual who pays close attention to details. 
+				  </div>
+				  <div class="SocialMediaButtonContainer">
+					<a href="https://www.linkedin.com/in/filip-volari%C4%87-84b3b325b/">
+						<img class="Button" src="linkedin.png" alt="linkedin"/>
+					</a>
+					<a href="https://github.com/Fickos">
+						<img class="Button" src="github.png" alt="github"/>
+					</a>
+				  </div>
+				</div>
+				<img class="HeroAvatar" src="avatar.svg" alt="Avatar " loading="lazy" />
+			</div>
+			<div class="projects-section" id="section-1">
+				<Projects client:load />
+			</div>
+			<div class="hobby-section" id="section-2">
+				<HobbyProjects client:load />
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	@import "../styles/HeadingNavbar.module.scss";
+	@import "../styles/Hero.module.scss";
+	@import "../styles/SocialMediaButtons.module.scss";
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+</style>

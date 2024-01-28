@@ -1,0 +1,24 @@
+.ContactMeContainer {
+    padding-top: 2vh;
+    padding-inline: 10px;
+    .ContactTitleContainer {
+      display: flex;
+      flex-direction: row;
+      .ContactTitle {
+        font-size: 24px;
+        font-weight: 700;
+        &.active {
+          padding-left: 5px;
+          color: #0891b2;
+        }
+      }
+    }
+    .ContactCard {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #1e293b;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: row;
+    }
+  }

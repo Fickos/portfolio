@@ -1,0 +1,46 @@
+.HeroSection {
+    padding-inline: 10px;
+    padding-top: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 30vh;
+
+    @media(max-width: 650px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .HeroContent {
+      @media(max-width: 650px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .HeroTitle {
+      font-size: 26px;
+      font-weight: 700;
+      color: white;
+      font-family: "Oswald", sans-serif;
+      &.active {
+        color: #0891b2;
+      }
+    }
+    .HeroParagraph {
+      padding-top: 2vh;
+      line-height: 36px;
+      font-size: 20px;
+      max-width: 80%;
+      @media(max-width: 650px) {
+        max-width: 100%;
+        text-align: justify;
+      }
+    }
+    .HeroAvatar {
+      height: 35vh;
+      @media (max-width: 650px) {
+        height: 150px;
+        width: 100px;
+      }
+    }
+}

@@ -1,0 +1,14 @@
+.SocialMediaButtonContainer {
+    padding-top: 2vh;
+    display: flex;
+    gap: .5em;
+    .Button {
+      height: 40px;
+      width: 40px;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: translateY(10px);
+      }
+    }
+  }

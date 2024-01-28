@@ -1,0 +1,107 @@
+.HeaderContainer {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .HeaderTitle {
+    color: #0891b2;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+  }
+  
+  .NavBarContainer {
+    display: flex;
+    flex-direction: row;
+    padding-inline: 2.5px;
+    justify-content: space-evenly;
+
+    @media (max-width: 650px) {
+      display: none; /* Hide regular navigation for smaller screens */
+    }
+  
+    .NavBarContainerItem {
+      padding-inline: 5px;
+  
+      &.active {
+        color: #0891b2;
+        cursor: pointer;
+      }
+      
+      &:hover {
+        color: #1a9cc2;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Mobile menu styles
+
+.MobileMenuIcon {
+  display: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.MenuIconBar {
+  width: 22px;
+  height: 2px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s ease-in-out;
+}
+
+.active .MenuIconBar:nth-child(1) {
+  transform: translateY(9px) translateY(-50%) rotate(-45deg);
+}
+
+.active .MenuIconBar:nth-child(2) {
+  opacity: 0;
+}
+
+.active .MenuIconBar:nth-child(3) {
+  transform: translateY(-9px) translateY(50%) rotate(45deg);
+}
+
+.MobileMenu {
+  display: none; /* Initially hide for larger screens */
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background-color: #0f172a;
+  padding: 1rem;
+  transform: translateX(100%); /* Initially position off-screen to the right */
+  transition: transform 0.4s ease-in-out; /* Add transition for smooth effect */
+}
+
+.MobileMenuItem {
+  padding: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+
+  &.active {
+    color: #0891b2;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .MobileMenuIcon {
+    display: block; /* Show burger icon for smaller screens */
+  }
+
+  .MobileMenu {
+    display: flex; /* Show mobile menu for smaller screens */
+  }
+
+  .MobileMenu.open {
+    transform: translateX(0); /* Keep it in the visible area */
+  }
+}
