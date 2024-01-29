@@ -80,7 +80,6 @@ export const hobbyProjects = [
         "Knowledge-based Catan bot. Created a web application which N number of players to play a game of Catan with M number of bots. The bots 'knowledge' is stored as Drools rules, and they play with a very good precision.",
       techStack: [
         "React.js",
-        "SASS",
         "SpringBoot",
         "Drools",
       ],
